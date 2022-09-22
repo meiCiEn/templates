@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/CSS/reset.css">
+    <link rel="stylesheet" href="./assets/CSS/style.css" />
+    <title>Header</title>
+</head>
+
+<body>
+    <header>
+        <!-- Logo -->
+        <a href="#" class="logo"><img id="logo" src="./assets/images/otter-white.svg" alt="otter logo"></a>
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu" />
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav id="nav">
+            <ul id="main-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Visit</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main content -->
+    <main>
+        <!-- <article>
+            <h1>
+                Title
+            </h1>
+            <p>
+                Text
+            </p>
+        </article> -->
+    </main>
+    <script>const burger = document.querySelector('.side-menu');
+
+burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    document.querySelector('#nav').classList.toggle('active');
+   
+});
+</script>
+</body>
+
+</html>

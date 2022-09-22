@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* Schéma de couleurs */
+
+:root {
+    --grey: #8D8F84;
+    --mustard: #F2C744;
+    --white: #ffffff;
+    --dirtyWhite: #F2EFEB;
+    --almostBlack: #1C2120;
+    --charcoal: #484B4B;
+}
+
+body{
+    background-color: var (--dirtyWhite);
+    font-family: 'Raleway', sans-serif;    
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --col-1: #FFFFFF; /* body */
+    --col-2: #1A1A1A; 
+    --col-3: #7454DB;
+    --col-4: #111111; /* text */
+    --col-5: #F2F2F2;
+    --col-6: #4E4E4E;
+    --col-7: #333333;
+}
+
+body{
+    background-color: var(--col-1);
+    font-family: 'Raleway', sans-serif;    
+    min-height: 100vh; /* = 100% viewport height = l'hauteur de la fenêtre d'affichage */
+}
+
+div.navbar{
+    display: flex;
+    flex-direction: row; 
+    background-color: var(--col-2);
+    border-bottom: 3px solid var(--col-3);
+    width: 100%;
+    align-items: center; 
+    padding: 0 5vw; /* 5vw = 5% de la largeur de la fenêtre d'affichage (le viewport) */
+}
+
+
+div.navbar div.logo-wrapper {
+    width: 60px;
+}
+
+div.navbar svg path#logo {
+    fill: var(--col-1);
+}
+
+div.navbar svg path#logo:hover {
+    fill: var(--col-3);
+}
+
+/* barre de navigation : deuxième enfant */
+
+div.navbar {
+    position: relative;
+}
+
+div.navbar nav.topnav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+div.navbar nav.topnav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+div.navbar nav.topnav a {
+    margin: 0 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+div.navbar nav.topnav a  {
+    color: var(--col-6);
+}
+
+div.navbar nav.topnav a:hover {
+    color: var(--col-3);
+    border-bottom: 2px solid;
+}
+
+div.navbar nav.topnav a.active {
+    color: var(--col-3);
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.toggle {
+    display: none;
+}
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    div.navbar {
+        height: 65px;
+    }
+
+    svg.logo {
+        width: 100%;
+    }
+
+    .topnav a {display: none;}
+
+    a.toggle, a.toggle.responsive {
+        position: absolute;
+        right: 5vw;
+        top: 25px;
+        order: 1;
+        display:block;
+        padding: 0 10px;
+    }
+    a.toggle img {
+        width: 20px;
+    }
+    .topnav.responsive > ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        animation: fadeIn 1s;
+        position: absolute;
+        font-size: 14px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        }
+    }
+
+    .topnav.responsive li {
+        display: block;
+        border-bottom: 2px solid #F2C744;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-color: #484B4B;
+        height: 75px;
+    }
+    .topnav.responsive li a {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        color: #F2EFEB; 
+    padding-top: 36px;
+    padding-bottom: 36px;
+
+    line-height: 1;
+}
+
+div.navbar.responsive nav.topnav.responsive ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+        
+        ul#mobile-menu a {
+            position: relative;
+            text-decoration: none;
+            color: #F2EFEB; 
+        
+        }
+
+
+ 
+    ul#mobile-menu {
+        list-style: none;
+        padding: 0px;
+        width: 100%;
+    }
+    
+    /* ul#mobile-menu>li:first-child {
+        border-top: 2px solid #F2C744;
+    
+    } */
+    
+    ul#mobile-menu>li {
+        border-bottom: 2px solid #F2C744;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-color: #484B4B;
+    }
+    
+    ul#mobile-menu>li:last-child {
+        border-bottom: 5px solid #F2C744;
+    
+    }
+    
+    ul#mobile-menu {
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    }
+    
+    ul#mobile-menu a {
+        position: relative;
+        text-decoration: none;
+        color: #F2EFEB; 
+    
+    }
+    
+    .menu-item {
+        padding-top: 36px;
+        padding-bottom: 36px;
+        display: block;
+        line-height: 1;
+    }
+    
+    .menu-item-of-page {
+        background-color: #1C2120 !important;
+        color: #F2C744 !important;
+        border-bottom: 2px solid #F2C744 !important;
+        text-align: center !important;
+        padding-top: 36px !important;
+        padding-bottom: 36px !important;
+        display: block;
+        line-height: 1;
+    }
+
